@@ -2,17 +2,15 @@
 //remember these functions when creating a employee time tracker
 
 function currentTime() {
-var date = new Date();
-var hour = date.getHours();
-var min = date.getMinutes();
-var sec = date.getSeconds();
-hour = updateTime(hour);
-min = updateTime(min);
-sec = updateTime(sec);
-document.getElementById("clock").innertext = hour + " : " +
-    min + " : " + sec;
-var t = setTimeout(function (){currentTime()
-    }, 1000);
+    var date = new Date(); /* creating object of Date class */
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+    hour = updateTime(hour);
+    min = updateTime(min);
+    sec = updateTime(sec);
+    document.getElementById("clock").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
+    var t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
 }
 
 function updateTime(k) {
@@ -24,4 +22,5 @@ function updateTime(k) {
     }
 }
 
-currentTime();
+currentTime(); /* calling currentTime() function to initiate the process */
+Now we have to add just t
